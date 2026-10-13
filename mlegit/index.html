@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Legitymacja szkolna</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+  <div class="app">
+    <header>
+      <span class="back">‹ Wróć</span>
+      <h1>Legitymacja szkolna</h1>
+      <span class="time" id="clock"></span>
+    </header>
+
+    <div class="card" id="card">
+      <div class="photo-area">
+        <img id="photoDisplay" src="https://via.placeholder.com/100x120?text=Zdjęcie" alt="Zdjęcie">
+      </div>
+      <div class="data-area">
+        <div class="field"><label>Imię (Imiona)</label><span id="imie">KRZYSZTOF</span></div>
+        <div class="field"><label>Nazwisko</label><span id="nazwisko">KOWALSKI</span></div>
+        <div class="field"><label>Data urodzenia</label><span id="dataUrodzenia">16.08.2013</span></div>
+        <div class="field"><label>Numer PESEL</label><span id="pesel">13281655531</span></div>
+        <div class="field"><label>Numer legitymacji</label><span id="nrLegitymacji">4322/44</span></div>
+        <div class="field"><label>Data wydania</label><span id="dataWydania">25.09.2025</span></div>
+        <div class="field"><label>Termin ważności</label><span id="terminWaznosci">30.09.2026</span></div>
+      </div>
+      <div class="flag-eagle">
+        <span class="flag">⬜🟥</span>
+        <span class="eagle">🦅</span>
+      </div>
+      <div class="valid-badge">✅ Dokument ważny</div>
+    </div>
+
+    <div class="buttons">
+      <button id="confirmBtn">Potwierdź dane</button>
+      <button id="deleteBtn">Usuń legitymację</button>
+    </div>
+
+    <div class="qr-area">
+      <div id="qrcode"></div>
+    </div>
+
+    <div class="form-area">
+      <input type="text" id="inputImie" placeholder="Imię">
+      <input type="text" id="inputNazwisko" placeholder="Nazwisko">
+      <input type="text" id="inputDataUrodzenia" placeholder="Data urodzenia">
+      <input type="text" id="inputPesel" placeholder="PESEL">
+      <input type="text" id="inputNrLegitymacji" placeholder="Numer legitymacji">
+      <input type="text" id="inputDataWydania" placeholder="Data wydania">
+      <input type="text" id="inputTerminWaznosci" placeholder="Termin ważności">
+      <input type="file" id="photoInput" accept="image/*">
+      <button id="generateLinkBtn">Generuj link</button>
+      <input type="text" id="linkOutput" readonly placeholder="Link pojawi się tutaj">
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
